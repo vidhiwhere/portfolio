@@ -1,4 +1,9 @@
 import { useState } from "react";
+import img1 from "../assets/photos/Screenshot (829).png";
+import img2 from "../assets/photos/Screenshot (830).png";
+import img3 from "../assets/photos/Screenshot (831).png";
+
+export const projectImages = [img1, img2, img3];
 
 export default function CardFlip({
   title = "Project One",
@@ -6,6 +11,7 @@ export default function CardFlip({
   description = "A full stack application built with MongoDB, Express, React and Node.",
   features = ["React", "Node.js", "MongoDB", "REST API"],
   link = "#",
+  img = img1,
 }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -46,6 +52,7 @@ export default function CardFlip({
             justifyContent: "flex-end",
             padding: "1.5rem",
             color: "white",
+            overflow: "hidden",
           }}
         >
           {/* Paperclip */}
@@ -63,8 +70,28 @@ export default function CardFlip({
             <div style={{ width: 8, height: 8, borderRadius: "50%", border: "1px solid white" }} />
           </div>
 
+          {/* Small image box */}
+          <div style={{
+            position: "absolute",
+            top: "1.2rem",
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "160px",
+            height: "110px",
+            borderRadius: "12px",
+            overflow: "hidden",
+            border: "2px solid rgba(255,255,255,0.35)",
+            boxShadow: "0 4px 16px rgba(0,0,0,0.25)",
+          }}>
+            <img
+              src={img}
+              alt={title}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+
           <h3 style={{ fontSize: "1.3rem", fontFamily: "serif", marginBottom: "0.4rem" }}>{title}</h3>
-          <p style={{ fontSize: "0.85rem", opacity: 0.7 }}>{subtitle}</p>
+          <p style={{ fontSize: "1rem", opacity: 0.8 }}>{subtitle}</p>
           <p style={{ fontSize: "0.75rem", opacity: 0.5, marginTop: "0.5rem" }}>Hover to see more →</p>
         </div>
 

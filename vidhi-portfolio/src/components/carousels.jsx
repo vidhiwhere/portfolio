@@ -1,9 +1,12 @@
 import { useState } from "react";
+import image1 from "../assets/photos/WhatsApp Image 2026-01-08 at 21.06.21.jpeg"
+import image2 from "../assets/photos/WhatsApp Image 2026-03-03 at 23.42.49.jpeg"
+import image3 from "../assets/photos/WhatsApp Image 2026-03-04 at 10.18.09.jpeg"
 
 const projects = [
-  { title: "Project One", subtitle: "MERN Stack App", description: "Full stack app with auth and REST API.", features: ["React", "Node.js", "MongoDB"], img: "/images/project1.png", link: "#" },
-  { title: "Project Two", subtitle: "AI/ML Model", description: "Machine learning model for image classification.", features: ["Python", "TensorFlow", "Flask"], img: "/images/project2.png", link: "#" },
-  { title: "Project Three", subtitle: "Portfolio", description: "This very portfolio you are looking at!", features: ["React", "Vite", "CSS"], img: "/images/project3.png", link: "#" },
+  { title: "JC Member of Namespace BPIT", description: "An active mentor and participant ", features: [], img: image1, link: "https://www.instagram.com/p/DNya2xa5Aza/?igsh=NTYzem50Z3Q1MWFi" },
+  { title: "Active member of Kalam BPIT", description: "Actively participating in literary events ", features: [], img: image2, link: "https://www.instagram.com/kalam.bpit?igsh=cWx3MnFldWM1anZ2" },
+  { title: "Member of Avaran", description: "A member of dramatics society of BPIT", features: [], img: image3, link: "https://www.instagram.com/p/DFxvtdxS1jv/?igsh=N3c0aXRoa2YzbzQx" },
 ];
 
 export default function Carousel() {
@@ -30,9 +33,9 @@ export default function Carousel() {
   return (
     <div style={{ position: "relative", zIndex: 2, minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
 
-      <h2 style={{ color: "white", fontFamily: "serif", fontSize: "2rem", marginBottom: "3rem", opacity: 0.9 }}>
-        My Projects 🐚
-      </h2>
+      <p style={{ color: "white", fontFamily:"emoji" , fontSize: "1.5rem", marginBottom: "3rem", opacity: 0.9 }}>
+        Hi ,i am a student of Btech ,computer science and engineering 2nd year at BPIT .
+      </p>
 
       {/* Carousel */}
       <div style={{ position: "relative", width: "100%", height: "380px", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -80,11 +83,11 @@ export default function Carousel() {
                   {/* Paperclip */}
                   <div style={{ position: "absolute", top: "-16px", left: "20px", fontSize: "1.8rem", transform: "rotate(-20deg)" }}>📎</div>
 
-                  {/* Project image */}
+                  {/* Project image — opacity raised to 0.85 so photos are clearly visible */}
                   <img
                     src={p.img}
                     alt={p.title}
-                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.4 }}
+                    style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.85 }}
                   />
 
                   <div style={{ position: "relative", padding: "1.2rem", background: "linear-gradient(to top, rgba(0,0,0,0.6), transparent)" }}>
@@ -133,7 +136,7 @@ export default function Carousel() {
                       cursor: "pointer",
                     }}
                   >
-                    View Project →
+                    social media handles
                   </div>
                 </div>
 
