@@ -5,9 +5,9 @@ import img2 from "../assets/photos/Screenshot (830).png";
 import img3 from "../assets/photos/Screenshot (831).png";
 
 const projects = [
-  { title: "Project One", subtitle: "Firerisksim", description: "FireRiskSim is an AI-powered forest fire prediction and simulation platform that analyzes environmental and satellite-based data to predict fire-prone regions", features: ["React", "Rasterio", "Leaflet.js"], link: "https://github.com/...", img: img1 },
+  { title: "Project One", subtitle: "Firerisksim", description: "FireRiskSim is an AI-powered forest fire prediction and simulation platform that analyzes environmental and satellite-based data to predict fire-prone regions", features: ["React", "Rasterio", "Leaflet.js"], link: "https://github.com/...", img: img3 },
   { title: "Project Two", subtitle: "Streethealth", description: "StreetWealth is a financial management platform designed specifically for street vendors.", features: ["HTML, Tailwind CSS, JavaScript", "TensorFlow", "Flask"], link: "https://github.com/...", img: img2 },
-  { title: "Project Three", subtitle: "Portfolio", description: "This very portfolio you are looking at!", features: ["React", "Vite", "CSS"], link: "#", img: img3 },
+  { title: "Project Three", subtitle: "Portfolio", description: "This very portfolio you are looking at!", features: ["React", "Vite", "CSS"], link: "#", img: img1 },
 ];
 
 export default function Projects() {
